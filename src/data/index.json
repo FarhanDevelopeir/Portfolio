@@ -1,0 +1,87 @@
+{
+  "skills": [
+    {
+      "id": "1",
+      "src": "./img/html5-logo-31813.png",
+      "title": "HTML",
+      "description": " Proficient in using HTML to structure and organize web content, ensuring accessibility and compatibility across various browsers and devices."
+    },
+    {
+      "id": "2",
+      "src": "./img/pngwing.com (1).png",
+      "title": "CSS",
+      "description": " Skilled in CSS for designing visually appealing and responsive web layouts, with an emphasis on clean and maintainable code."
+    },
+    {
+      "id": "3",
+      "src": "./img/javascript-39395.png",
+      "title": "JavaScript",
+      "description": "Experienced in JavaScript for implementing dynamic and interactive features on websites, enhancing user engagement and functionality."
+    },
+    {
+      "id": "4",
+      "src": "./img/pngwing.com.png",
+      "title": "React JS",
+      "description": " Adept at building modern, component-based web applications using React.js, with a focus on creating fast and seamless user interfaces."
+    }
+  ],
+  "portfolio": [
+    {
+      "id": "1",
+      "src": "./img/cvmaker.png",
+      "title": "CV Maker",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
+      "link": "View In Github",
+      "demo": "View Demo",
+      "weblink":"https://cvmakker.netlify.app/"
+
+      
+    },
+    {
+      "id": "2",
+      "src": "./img/ecomm.PNG",
+      "title": "App Dashboard",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
+      "link": "View In Github",
+      "demo": "View Demo",
+      "weblink":"https://netlify.app/"
+
+    },
+    {
+      "id": "3",
+      "src": "./img/pokemon.png",
+      "title": "Easy Rentn",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
+      "link": "View In Github",
+      "demo": "View Demo",
+      "weblink":"https://pokimonsapp.netlify.app/"
+
+    }
+  ],
+  "testimonial": [
+    {
+      "id": "1",
+      "count": "5",
+      "src": "./img/avatar-image.png",
+      "description": "Muhammad Farhan is a React genius. Our site is now modern, functional, and beautiful. Great communicator too!",
+      "author_name": "Dianne Russel",
+      "author_designation": "USA"
+    },
+    {
+      "id": "2",
+      "count": "5",
+      "src": "./img/avatar-image-1.png",
+      "description": "His React skills are top-notch. He delivered a fantastic website that wowed our users. Highly recommended!",
+      "author_name": "Kristin Watson",
+      "author_designation": "Canada"
+    },
+    {
+      "id": "3",
+      "count": "5",
+      "src": "./img/avatar-image-2.png",
+      "description": "He is a React pro. He made our website dynamic and user-friendly. Can't wait to work with him again!",
+      "author_name": "Kathryn Murphy",
+      "author_designation": "London"
+    }
+  ]
+}
