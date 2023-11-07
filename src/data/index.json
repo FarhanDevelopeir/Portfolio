@@ -30,7 +30,7 @@
       "id": "1",
       "src": "./img/cvmaker.png",
       "title": "CV Maker",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
+      "description": "A user-friendly solution for effortless resume creation. With this tool, individuals can input their personal information, educational history, and work experience, and then customize the layout and color scheme to match their unique preferences.",
       "link": "View In Github",
       "demo": "View Demo",
       "weblink":"https://cvmakker.netlify.app/"
@@ -40,18 +40,17 @@
     {
       "id": "2",
       "src": "./img/ecomm.PNG",
-      "title": "App Dashboard",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
+      "title": "E-commerce",
+      "description": " Making online shopping easy.Users can easily filter products by category, search for specific items, and add products to their cart. With the ability to adjust quantities and remove items, this project provides a seamless and user-friendly online shopping experience.",
       "link": "View In Github",
       "demo": "View Demo",
-      "weblink":"https://netlify.app/"
-
+      "weblink":"https://eecommercepi.netlify.app/"
     },
     {
       "id": "3",
       "src": "./img/pokemon.png",
-      "title": "Easy Rentn",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
+      "title": "Pokemon",
+      "description": " Initially, it displays 10 Pokémon cards for selection. Clicking on a specific Pokémon reveals a card with comprehensive details. The app also features 'Next' and 'Previous' buttons for easy navigation, allowing users to explore additional Pokémon in sets of 10.",
       "link": "View In Github",
       "demo": "View Demo",
       "weblink":"https://pokimonsapp.netlify.app/"

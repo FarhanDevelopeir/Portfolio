@@ -1,8 +1,8 @@
 export default function AboutMe() {
   return (
     <section id="AboutMe" className="about--section">
-      <div className="about--section--img">
-        <img src="./img/abc.png" alt="About Me" />
+      <div className="about--section--img shadow"  >
+        <img src="./img/aboutpic.png" alt="About Me" style={{height:'600px'}} />
       </div>
       <div className="hero--section--content--box about--section--box">
         <div className="hero--section--content">
