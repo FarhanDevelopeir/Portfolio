@@ -1,4 +1,31 @@
-/* Global CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  font-family: "Roboto", sans-serif;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.25rem; /* Equivalent to rounded-md in Tailwind */
+  transition: background-color 0.5s;
+  padding: 14px 50px;
+}
+.btn-projects {
+  font-family: "Roboto", sans-serif;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 200;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.25rem; /* Equivalent to rounded-md in Tailwind */
+  transition: background-color 0.5s;
+  padding: 5px 20px;
+}
 
 body {
   margin: 0;
@@ -25,28 +52,7 @@ p {
   --black: #000000;
   --white: #ffffff;
 }
-.btn {
-  font-family: "Roboto";
-  display: inline-block;
-  padding: 14px 32px;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 4px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  transition: background-color 0.5s;
-  -webkit-transition: background-color 0.5s;
-  -moz-transition: background-color 0.5s;
-  -ms-transition: background-color 0.5s;
-  -o-transition: background-color 0.5s;
-}
+
 .btn-outline-primary {
   color: var(--primary);
   background-color: var(--white);
@@ -268,7 +274,6 @@ h2 {
   border-radius: 10.6px;
   background: var(--bg-shade);
   min-height: 250px;
-  
 }
 .skills--section--card:hover {
   border-bottom: 4px solid var(--primary);
@@ -323,7 +328,7 @@ h2 {
 /* About Us Ends */
 
 /* My Portfolio Starts */
-.portfolio-demo{
+.portfolio-demo {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -387,9 +392,9 @@ h2 {
 .portfolio--link {
   text-decoration: none;
   display: flex;
-  gap: 16px;
+  gap: 10px;
   border-bottom: 1.33px solid var(--primary);
-  padding-bottom: 10.6px;
+  padding-bottom: 8px;
   font-weight: 600;
 }
 .portfolio--section--card:hover path {

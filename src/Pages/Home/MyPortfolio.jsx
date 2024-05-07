@@ -2,15 +2,15 @@ import data from "../../data/index.json";
 
 export default function MyPortfolio() {
   return (
-    <section className="portfolio--section" id="MyPortfolio">
-      <div className="portfolio--container-box">
+    <section className="mt-20 w-[90%] m-auto" id="MyPortfolio">
+      <div className=" md:flex md:justify-between mb-10 ">
         <div className="portfolio--container">
-          <p className="sub--title">Recent Projects</p>
-          <h2 className="section--heading">My Portfolio</h2>
+          <p className="sub--title  ">Recent Projects</p>
+          <h2 className="section--heading mb-5 md:mb-0 ">My Portfolio</h2>
         </div>
-        <div>
+        <div className=" " >
           <a  href="https://github.com/FarhanDevelopeir" target="_blank" style={{textDecoration:'none'}}>
-          <button className="btn btn-github">
+          <button className="btn btn-github m-auto ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -30,24 +30,24 @@ export default function MyPortfolio() {
           </a>
         </div>
       </div>
-      <div className="portfolio--section--container">
+      <div className=" grid sm:grid-cols-2 md:grid-cols-3 gap-5 ">
         {data?.portfolio?.map((item, index) => (
-          <div key={index} className="portfolio--section--card">
+          <div key={index} className="border shadow-sm rounded-md">
             <div className="portfolio--section--img hover-zoom">
-              <img src={item.src} alt="Placeholder" className="hover-zoom" />
+              <img src={item.src} alt="Placeholder" className="hover-zoom rounded-md " />
             </div>
-            <div className="portfolio--section--card--content">
+            <div className="p-3">
               <div>
-                <h3 className="portfolio--section--title">{item.title}</h3>
-                <p className="text-md">{item.description}</p>
+                <h3 className="mb-2 font-semibold ">{item.title}</h3>
+                <p className="text-sm md:text-[16px] mb-5">{item.description}</p>
               </div>
-              <div className="portfolio-demo">
-              <p className="text-sm portfolio--link">
+              <div className="portfolio-demo mb-4  flex flex-col md:flex-row">
+              <p className="text-sm portfolio--link mb-3 md:mb-0 ">
                 {item.link}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
+                  width="12"
+                  height="12"
                   viewBox="0 0 20 19"
                   fill="none"
                 >
@@ -61,7 +61,9 @@ export default function MyPortfolio() {
                 </svg>
 
               </p>
-              <a href={item.weblink} target="_blank"><button className="btn btn-primary">{item.demo}</button></a>
+              <a href={item.weblink} target="_blank">
+  <button className="btn-projects btn-primary w-full md:w-transparent ">{item.demo}</button>
+</a>
               </div>
 
             </div>
