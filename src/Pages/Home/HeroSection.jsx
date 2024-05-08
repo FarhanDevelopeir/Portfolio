@@ -4,9 +4,9 @@ export default function HeroSection() {
        <section id="heroSection" className=" flex items-center  w-[85%] m-auto justify-between  ">
       <div className="  lg:w-[50%]  lg:text-left  ">
         <div className="">
-          <p className=" font-semibold text-xl">Assalamoalaikum! I'm Muhammad Farhan</p>
+          <p className=" font-semibold text-2xl">Assalamoalaikum! I'm Muhammad Farhan</p>
           
-            <p className="text-[35px] font-semibold py-5">React <br/> Developer</p>
+            <p className=" text-[40px] md:text-[50px] font-semibold py-5">React <br/> Developer</p>
           
            {/* <span  > Developer</span> */}
          
