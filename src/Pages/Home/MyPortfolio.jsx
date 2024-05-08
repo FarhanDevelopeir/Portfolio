@@ -30,11 +30,11 @@ export default function MyPortfolio() {
           </a>
         </div>
       </div>
-      <div className=" grid sm:grid-cols-2 md:grid-cols-3 gap-5 ">
+      <div className=" grid sm:grid-cols-2 md:grid-cols-3 gap-8 ">
         {data?.portfolio?.map((item, index) => (
-          <div key={index} className="border shadow-sm rounded-md">
-            <div className="portfolio--section--img hover-zoom">
-              <img src={item.src} alt="Placeholder" className="hover-zoom rounded-md " />
+          <div key={index} className="border shadow-md rounded-md">
+            <div className=" hover-zoom ">
+              <img src={item.src} alt="Placeholder" className=" h-52 w-full hover-zoom rounded-t-md border-b " />
             </div>
             <div className="p-3">
               <div>
