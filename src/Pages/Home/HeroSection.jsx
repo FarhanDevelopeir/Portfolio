@@ -1,4 +1,14 @@
+import { useState } from "react";
+import Resume from "./Resume";
+
 export default function HeroSection() {
+
+  const [openResume, setOpenResume] = useState(false)
+
+  const handleResume = () => {
+   setOpenResume(true)
+  }
+
   return (
    <div className=" z-10 bg-[#f5fcff] pt-36 md:pt-40 pb-20">
        <section id="heroSection" className=" flex items-center  w-[85%] m-auto justify-between  ">
@@ -14,6 +24,9 @@ export default function HeroSection() {
           Experienced React developer dedicated to transforming design concepts into functional web solutions.
             <br /> 
           </p>
+          <button className="btn btn-github mt-7" onClick={handleResume}>
+            View Resume
+          </button>
         </div>
         {/* <button className="btn btn-primary">Get In Touch</button> */}
       </div>
@@ -21,6 +34,7 @@ export default function HeroSection() {
         <img src="./img/mainpic.png" alt="Hero Section" className="h-full" />
       </div>
     </section>
+    {openResume && <Resume setOpenResume={setOpenResume} />}
    </div>
   );
 }
