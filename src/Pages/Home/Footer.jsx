@@ -1,11 +1,18 @@
 import { Link } from "react-scroll";
 import React from "react";
+import { motion } from "framer-motion";
 
 function Footer() {
   return (
-    <footer className="footer--container">
-      <div className="footer--link--container">
-        <div>
+    <footer className="bg-gray-950 text-white mt-16 pt-16">
+      <motion.div
+        className="footer--link--container"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
+        <div className="md:ml-10 mb-10 md:mb-0">
           <h2>Portfolio</h2>
         </div>
         <div className="footer--items">
@@ -77,12 +84,12 @@ function Footer() {
             </li> */}
           </ul>
         </div>
-        <div className="footer--social--icon">
+        <div className="footer--social--icon mt-10 mt:mb-0 mr-5">
           <ul>
-            <li>
+            <li className="border bg-slate-200 rounded-md">
               <a
                 href="https://www.facebook.com/"
-                className="navbar--content"
+                className="navbar--content  bg-slate-500 "
                 target="_blank"
                 rel="noreferrer"
               >
@@ -100,7 +107,7 @@ function Footer() {
                 </svg>
               </a>
             </li>
-            <li>
+            <li className="border bg-slate-200 rounded-md">
               <a
                 href="https://www.instagram.com/"
                 className="navbar--content"
@@ -123,7 +130,7 @@ function Footer() {
                 </svg>
               </a>
             </li>
-            <li>
+            <li className="border bg-slate-200 rounded-md">
               <a
                 href="https://www.twitter.com/"
                 className="navbar--content"
@@ -144,7 +151,7 @@ function Footer() {
                 </svg>
               </a>
             </li>
-            <li>
+            <li className="border bg-slate-200 rounded-md">
               <a
                 href="https://www.linkedin.com/"
                 className="navbar--content"
@@ -169,10 +176,16 @@ function Footer() {
             </li>
           </ul>
         </div>
-      </div>
+      </motion.div>
       <hr className="divider" />
-      <div className="footer--content--container">
-        <p className="footer--content">Made with 💖 by Muhammad Farhan</p>
+      <motion.div
+        className="   text-center"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.5, ease: "easeOut", delay: 0.05 }}
+      >
+        <p className=" text-center ">Made with 💖 by Muhammad Farhan</p>
         <div className="footer--social--icon">
           <ul>
             <li>
@@ -216,7 +229,7 @@ function Footer() {
             </li>
           </ul>
         </div>
-      </div>
+      </motion.div>
     </footer>
   );
 }

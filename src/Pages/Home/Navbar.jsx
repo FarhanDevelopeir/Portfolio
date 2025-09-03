@@ -18,17 +18,18 @@ function Navbar() {
   };
 
   return (
-    <nav className="  bg-white  dark:bg-gray-900 fixed w-full z-20  top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+    <nav className=" text-white   bg-gray-900 fixed w-full z-20  top-0 start-0 border-b border-gray-600">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
-          href="https://flowbite.com/"
-          class="flex items-center space-x-3 rtl:space-x-reverse h-12 w-40 "
+          href="/"
+          class=" text-[#c3ac80] flex items-center space-x-3 rtl:space-x-reverse h-12 w-40 "
         >
-          <img
-            src={Portfolio_logo}
-            // class="h-12"
-            alt="Flowbite Logo"
-          />
+          {/* <img
+            // src={Portfolio_logo}
+            
+            // alt="Flowbite Logo"
+          /> */}
+          <h2>Portfolio</h2>
         </a>
         <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <Link
@@ -98,7 +99,7 @@ function Navbar() {
                   href="#"
                   class={`block py-2 px-3 ${
                     selectedItem === "Home"
-                      ? " md:bg-transparent md:text-blue-700  md:dark:text-blue-500"
+                      ? " md:bg-transparent md:text-blue-700  md:dark:text-white"
                       : ""
                   }  rounded `}
                 >
@@ -121,8 +122,8 @@ function Navbar() {
                   href="#"
                   class={`block py-2 px-3 ${
                     selectedItem === "Portfolio"
-                      ? " md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
-                      : ""
+                      ? "  text-blue-500 "
+                      : "text-white "
                   }  rounded `}
                 >
                   Portfolio
@@ -145,15 +146,21 @@ function Navbar() {
                   href="#"
                   class={`block py-2 px-3 ${
                     selectedItem === "About"
-                      ? " md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                      ? " md:text-blue-700 md:p-0 md:dark:text-white"
                       : ""
-                  }  rounded `}
+                  }  rounded text-white `}
                 >
                   About Me
                 </a>
               </Link>
             </li>
-            <li>
+            <li
+            className={` ${
+              selectedItem === "Skills"
+                ? " bg-gray-50 "
+                : "bg-gray-900 "
+            }   `}
+            >
               <Link
                 onClick={() => closeMenu("Skills")}
                 activeClass="navbar--active-content"
@@ -168,8 +175,8 @@ function Navbar() {
                   href="#"
                   class={`block py-2 px-3 ${
                     selectedItem === "Skills"
-                      ? "bg-blue-700 md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
-                      : ""
+                      ? "bg-blue-700  "
+                      : "text-white "
                   }  rounded `}
                 >
                   My Skills
