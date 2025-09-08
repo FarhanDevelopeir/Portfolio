@@ -1,87 +1,3 @@
-// import data from "../../data/index.json";
-// import { motion } from "framer-motion";
-
-// export default function MyPortfolio() {
-//   return (
-//     <section className="mt-20 w-[90%] m-auto" id="MyPortfolio">
-//       <div className=" md:flex md:justify-between mb-10 ">
-//         <div className="portfolio--container">
-//           <p className="sub--title  ">Recent Projects</p>
-//           <h2 className="section--heading mb-5 md:mb-0 ">My Portfolio</h2>
-//         </div>
-//         <div className=" ">
-//           <a href="https://github.com/FarhanDevelopeir" target="_blank" style={{ textDecoration: 'none' }}>
-//             <motion.button className="btn btn-github m-auto " whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.98 }}>
-//               <svg
-//                 xmlns="http://www.w3.org/2000/svg"
-//                 width="32"
-//                 height="32"
-//                 viewBox="0 0 33 33"
-//                 fill="none"
-//               >
-//                 <path
-//                   fillRule="evenodd"
-//                   clipRule="evenodd"
-//                   d="M16.3333 0.166748C7.50028 0.166748 0.333252 7.33378 0.333252 16.1667C0.333252 24.9997 7.50028 32.1667 16.3333 32.1667C25.1489 32.1667 32.3333 24.9997 32.3333 16.1667C32.3333 7.33378 25.1489 0.166748 16.3333 0.166748ZM26.9016 7.54202C28.8105 9.8674 29.9559 12.8348 29.9906 16.0452C29.5394 15.9585 25.0274 15.0387 20.4808 15.6114C20.3767 15.3858 20.2899 15.1428 20.1858 14.8999C19.9081 14.2405 19.5958 13.5637 19.2834 12.9216C24.3159 10.8739 26.6066 7.9238 26.9016 7.54202ZM16.3333 2.52684C19.804 2.52684 22.9797 3.82836 25.3919 5.96285C25.1489 6.30992 23.0838 9.06914 18.2248 10.8912C15.9862 6.77846 13.5047 3.41187 13.1229 2.89126C14.1467 2.64831 15.2227 2.52684 16.3333 2.52684ZM10.5199 3.811C10.8843 4.2969 13.3138 7.68085 15.5871 11.7068C9.20093 13.4075 3.56102 13.3728 2.95364 13.3728C3.83867 9.13855 6.70201 5.61577 10.5199 3.811ZM2.65863 16.1841C2.65863 16.0452 2.65863 15.9064 2.65863 15.7676C3.24865 15.7849 9.87772 15.8717 16.6977 13.824C17.0969 14.5875 17.4613 15.3684 17.8084 16.1493C17.6348 16.2014 17.4439 16.2535 17.2704 16.3055C10.2248 18.5788 6.47642 24.7914 6.16405 25.312C3.99485 22.8999 2.65863 19.6895 2.65863 16.1841ZM16.3333 29.8413C13.1749 29.8413 10.2595 28.7654 7.95147 26.9606C8.19442 26.4574 10.971 21.1125 18.676 18.4227C18.7107 18.4053 18.7281 18.4053 18.7628 18.388C20.689 23.3684 21.47 27.5506 21.6782 28.748C20.0296 29.4595 18.2248 29.8413 16.3333 29.8413ZM23.9515 27.4986C23.8127 26.6656 23.0838 22.6743 21.2964 17.7632C25.5828 17.0864 29.3311 18.1971 29.7997 18.3533C29.2097 22.1537 27.0231 25.4335 23.9515 27.4986Z"
-//                   fill="currentColor"
-//                 />
-//               </svg>
-//               Visit My GitHub
-//             </motion.button>
-//           </a>
-//         </div>
-//       </div>
-//       <div className=" grid sm:grid-cols-2 md:grid-cols-3 gap-8 ">
-//         {data?.portfolio?.map((item, index) => (
-//           <motion.div
-//             key={index}
-//             className="border shadow-md rounded-md"
-//             initial={{ opacity: 0, y: 30 }}
-//             whileInView={{ opacity: 1, y: 0 }}
-//             viewport={{ once: true, amount: 0.2 }}
-//             transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.08 }}
-//           >
-//             <div className=" hover-zoom ">
-//               <img src={item.src} alt="Placeholder" className=" h-52 w-full hover-zoom rounded-t-md border-b " />
-//             </div>
-//             <div className="p-3">
-//               <div>
-//                 <h3 className="mb-2 font-semibold ">{item.title}</h3>
-//                 <p className="text-sm md:text-[16px] mb-5">{item.description}</p>
-//               </div>
-//               <div className="portfolio-demo mb-4  flex flex-col md:flex-row">
-//                 <p className="text-sm portfolio--link mb-3 md:mb-0 ">
-//                   {item.link}
-//                   <svg
-//                     xmlns="http://www.w3.org/2000/svg"
-//                     width="12"
-//                     height="12"
-//                     viewBox="0 0 20 19"
-//                     fill="none"
-//                   >
-//                     <path
-//                       d="M4.66667 1.66675H18V15.0001M18 1.66675L2 17.6667L18 1.66675Z"
-//                       stroke="currentColor"
-//                       strokeWidth="2.66667"
-//                       strokeLinecap="round"
-//                       strokeLinejoin="round"
-//                     />
-//                   </svg>
-//                 </p>
-//                 <a href={item.weblink} target="_blank" rel="noreferrer">
-//                   <button className="btn-projects btn-primary w-full md:w-transparent ">{item.demo}</button>
-//                 </a>
-//               </div>
-//             </div>
-//           </motion.div>
-//         ))}
-//       </div>
-//     </section>
-//   );
-// }
-
-
-
 
 
 
@@ -95,46 +11,85 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Github, ExternalLink, ArrowUpRight } from "lucide-react";
 
-import cvmaker from "../../img/cvmaker.png";
-import cvmaker2 from "../../img/ecomm.png";
-import cvmaker3 from "../../img/pokemon.png";
-import cvmaker4 from "../../img/pokemon.png";
+import legacy from "../../img/legacy.png";
+import meeting from "../../img/meeting.png";
+import bookerise from "../../img/bookerise.png";
+// import cvmaker4 from "../../img/pokemon.png";
 
 
 // Sample portfolio data - replace with your actual data
+// const portfolioData = [
+//   {
+//     id: 1,
+//     title: "AI-Powered RAG Chatbot",
+//     description: "Advanced conversational AI system with custom knowledge base integration, vector search, and intelligent response generation using Claude API.",
+//     image: cvmaker,
+//     technologies: ["React", "Node.js", "Claude API", "Vector DB", "LangChain"],
+//     liveLink: "https://example.com",
+//     githubLink: "https://github.com",
+//     category: "AI/ML"
+//   },
+//   {
+//     id: 2,
+//     title: "Full Stack E-Commerce Platform",
+//     description: "Complete e-commerce solution with modern design, secure payment integration, and comprehensive admin dashboard.",
+//     image: cvmaker2,
+//     technologies: ["Next.js", "TypeScript", "MongoDB", "Stripe", "Tailwind"],
+//     liveLink: "https://example.com",
+//     githubLink: "https://github.com",
+//     category: "Full Stack"
+//   },
+//   {
+//     id: 3,
+//     title: "MCP Tools Dashboard",
+//     description: "Custom Model Context Protocol tools integration dashboard with real-time monitoring and orchestration capabilities.",
+//     image: cvmaker3,
+//     technologies: ["React", "MCP", "WebSocket", "Node.js", "Express"],
+//     liveLink: "https://example.com",
+//     githubLink: "https://github.com",
+//     category: "MCP Tools"
+//   },
+  
+// ];
+
+
+
 const portfolioData = [
   {
     id: 1,
-    title: "AI-Powered RAG Chatbot",
-    description: "Advanced conversational AI system with custom knowledge base integration, vector search, and intelligent response generation using Claude API.",
-    image: cvmaker,
-    technologies: ["React", "Node.js", "Claude API", "Vector DB", "LangChain"],
-    liveLink: "https://example.com",
-    githubLink: "https://github.com",
-    category: "AI/ML"
+    title: "Quran Academy",
+    description: `Learn Quran Online with Expert Teachers.
+Join thousands of students worldwide in their journey to master the Holy Quran. Learn from qualified teachers in the comfort of your home.`,
+    image: legacy, // replace with actual Quran Academy image
+    technologies: ["Next.js", "MongoDB", "shadcn", "TailwindCSS"],
+    liveLink: "https://legacyquranacademy.com/",
+    githubLink: "https://github.com/FarhanDevelopeir/lagecy-quran-academy", // update if available
+    category: "Full Stack"
   },
   {
     id: 2,
-    title: "Full Stack E-Commerce Platform",
-    description: "Complete e-commerce solution with modern design, secure payment integration, and comprehensive admin dashboard.",
-    image: cvmaker2,
-    technologies: ["Next.js", "TypeScript", "MongoDB", "Stripe", "Tailwind"],
-    liveLink: "https://example.com",
-    githubLink: "https://github.com",
+    title: "AI-Powered Requirement Engineering Assistant",
+    description: `Create, organize, and collaborate on your notes with the power of AI.
+Transform your ideas into actionable insights with our intelligent notebook platform.`,
+    image: meeting, // replace with actual project image
+    technologies: ["Vite + React.js", "WebRTC", "MongoDB", "Langraph", "Socket.IO", "Realtime OpenAI Agent", "Python", "Flask"],
+    liveLink: "https://pori-otula01.rd.tut.fi/",
+    githubLink: "https://github.com/html5technologies786/MARARE/", // update if available
     category: "Full Stack"
   },
   {
     id: 3,
-    title: "MCP Tools Dashboard",
-    description: "Custom Model Context Protocol tools integration dashboard with real-time monitoring and orchestration capabilities.",
-    image: cvmaker3,
-    technologies: ["React", "MCP", "WebSocket", "Node.js", "Express"],
-    liveLink: "https://example.com",
-    githubLink: "https://github.com",
-    category: "MCP Tools"
-  },
-  
+    title: "Bookerise",
+    description: `The idea of Bookerise occurred when we were talking to our clients at Design2tech, our software/web development agency,
+and started getting increasing requests to make a booking software that could take payments and manage customer data.`,
+    image: bookerise, // replace with actual Bookerise image
+    technologies: ["Next.js", "MongoDB", "Node.js", "Stripe", "shadcn"],
+    liveLink: "https://app.bookerise.com",
+    githubLink: "https://github.com", // update if available
+    category: "Full Stack"
+  }
 ];
+
 
 export default function MyPortfolio() {
   const containerVariants = {

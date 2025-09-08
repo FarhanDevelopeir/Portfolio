@@ -22,7 +22,7 @@
 
 
 
-import { cn } from "../../lib/utils";
+import { cn } from "../../";
 import React from "react";
 
 export function GridBackgroundDemo() {
