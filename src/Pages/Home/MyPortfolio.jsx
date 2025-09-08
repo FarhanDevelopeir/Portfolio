@@ -180,7 +180,7 @@ export default function MyPortfolio() {
 
               {/* Project Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-white transition-colors duration-300">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-white transition-colors duration-300">
                   {project.title}
                 </h3>
                 
@@ -216,7 +216,7 @@ export default function MyPortfolio() {
                     href={project.githubLink} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="p-3 border-2 border-gray-200 rounded-xl hover:border-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300 flex items-center justify-center"
+                    className="p-3 border-2 border-gray-200 rounded-xl hover:border-gray-900 hover:bg-gray-900 text-white transition-all duration-300 flex items-center justify-center"
                   >
                     <Github className="w-5 h-5" />
                   </a>
