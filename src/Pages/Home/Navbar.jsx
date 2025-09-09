@@ -5,6 +5,8 @@ import Portfolio_logo from "../../img/Portfolio_img.png";
 function Navbar() {
   const [navActive, setNavActive] = useState(false);
   const [selectedItem, setSelectedItem] = useState("Home");
+  const phoneNumber = "03070582931"
+  const whatsappUrl = `https://wa.me/${phoneNumber}`
 
   const toggleNav = () => {
     setNavActive(!navActive);
@@ -32,7 +34,7 @@ function Navbar() {
           <h2>Portfolio</h2>
         </a>
         <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <Link
+          {/* <Link
             onClick={closeMenu}
             activeClass="navbar--active-content"
             spy={true}
@@ -42,14 +44,37 @@ function Navbar() {
             to="Contact"
             className="navbar--content"
           >
-            <div
+            <button
+              href={whatsappUrl}
+              target="_blank"
               type="button"
               className="btn btn-outline-primary hidden md:block"
-              // className="text-yellow-400 cursor-pointer hidden md:block bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            // className="text-yellow-400 cursor-pointer hidden md:block bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               <span className="">Contact Me</span>
-            </div>
+            </button>
+          </Link> */}
+          <Link
+            onClick={() => {
+              closeMenu();
+              window.open(whatsappUrl, "_blank");
+            }}
+            activeClass="navbar--active-content"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            to="Contact"
+            className="navbar--content"
+          >
+            <button
+              type="button"
+              className="btn btn-outline-primary hidden md:block"
+            >
+              <span>Contact Me</span>
+            </button>
           </Link>
+
           <button
             onClick={toggleNav}
             data-collapse-toggle="navbar-sticky"
@@ -78,9 +103,8 @@ function Navbar() {
           </button>
         </div>
         <div
-          class={`${
-            navActive === true ? "block" : "hidden"
-          } items-center justify-between   w-full md:flex md:w-auto md:order-1`}
+          class={`${navActive === true ? "block" : "hidden"
+            } items-center justify-between   w-full md:flex md:w-auto md:order-1`}
           id="navbar-sticky"
         >
           <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
@@ -97,11 +121,10 @@ function Navbar() {
               >
                 <a
                   href="#"
-                  class={`block py-2 px-3 ${
-                    selectedItem === "Home"
-                      ? " md:bg-transparent md:text-blue-700  md:dark:text-white"
-                      : ""
-                  }  rounded `}
+                  class={`block py-2 px-3 ${selectedItem === "Home"
+                    ? " md:bg-transparent md:text-blue-700  md:dark:text-white"
+                    : ""
+                    }  rounded `}
                 >
                   Home
                 </a>
@@ -120,11 +143,10 @@ function Navbar() {
               >
                 <a
                   href="#"
-                  class={`block py-2 px-3 ${
-                    selectedItem === "Portfolio"
-                      ? "  text-blue-500 "
-                      : "text-white "
-                  }  rounded `}
+                  class={`block py-2 px-3 ${selectedItem === "Portfolio"
+                    ? "  text-blue-500 "
+                    : "text-white "
+                    }  rounded `}
                 >
                   Portfolio
                 </a>
@@ -144,22 +166,20 @@ function Navbar() {
               >
                 <a
                   href="#"
-                  class={`block py-2 px-3 ${
-                    selectedItem === "About"
-                      ? " md:text-blue-700 md:p-0 md:dark:text-white"
-                      : ""
-                  }  rounded text-white `}
+                  class={`block py-2 px-3 ${selectedItem === "About"
+                    ? " md:text-blue-700 md:p-0 md:dark:text-white"
+                    : ""
+                    }  rounded text-white `}
                 >
                   About Me
                 </a>
               </Link>
             </li>
             <li
-            className={` ${
-              selectedItem === "Skills"
+              className={` ${selectedItem === "Skills"
                 ? " bg-gray-50 "
                 : "bg-gray-900 "
-            }   `}
+                }   `}
             >
               <Link
                 onClick={() => closeMenu("Skills")}
@@ -173,11 +193,10 @@ function Navbar() {
               >
                 <a
                   href="#"
-                  class={`block py-2 px-3 ${
-                    selectedItem === "Skills"
-                      ? "bg-blue-700  "
-                      : "text-white "
-                  }  rounded `}
+                  class={`block py-2 px-3 ${selectedItem === "Skills"
+                    ? "bg-blue-700  "
+                    : "text-white "
+                    }  rounded `}
                 >
                   My Skills
                 </a>

@@ -17,43 +17,6 @@ import bookerise from "../../img/bookerise.png";
 // import cvmaker4 from "../../img/pokemon.png";
 
 
-// Sample portfolio data - replace with your actual data
-// const portfolioData = [
-//   {
-//     id: 1,
-//     title: "AI-Powered RAG Chatbot",
-//     description: "Advanced conversational AI system with custom knowledge base integration, vector search, and intelligent response generation using Claude API.",
-//     image: cvmaker,
-//     technologies: ["React", "Node.js", "Claude API", "Vector DB", "LangChain"],
-//     liveLink: "https://example.com",
-//     githubLink: "https://github.com",
-//     category: "AI/ML"
-//   },
-//   {
-//     id: 2,
-//     title: "Full Stack E-Commerce Platform",
-//     description: "Complete e-commerce solution with modern design, secure payment integration, and comprehensive admin dashboard.",
-//     image: cvmaker2,
-//     technologies: ["Next.js", "TypeScript", "MongoDB", "Stripe", "Tailwind"],
-//     liveLink: "https://example.com",
-//     githubLink: "https://github.com",
-//     category: "Full Stack"
-//   },
-//   {
-//     id: 3,
-//     title: "MCP Tools Dashboard",
-//     description: "Custom Model Context Protocol tools integration dashboard with real-time monitoring and orchestration capabilities.",
-//     image: cvmaker3,
-//     technologies: ["React", "MCP", "WebSocket", "Node.js", "Express"],
-//     liveLink: "https://example.com",
-//     githubLink: "https://github.com",
-//     category: "MCP Tools"
-//   },
-  
-// ];
-
-
-
 const portfolioData = [
   {
     id: 1,
@@ -115,11 +78,15 @@ export default function MyPortfolio() {
     }
   };
 
+
+  const phoneNumber = "03070582931"
+  const whatsappUrl = `https://wa.me/${phoneNumber}`
+
   return (
     <section className="py-20   min-h-screen" id="MyPortfolio">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <motion.div 
+        <motion.div
           className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-16"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -127,18 +94,18 @@ export default function MyPortfolio() {
           transition={{ duration: 0.6 }}
         >
           <div className="mb-8 lg:mb-0">
-           
+
             <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
               My Portfolio
             </h2>
-            <p className="text-white text-lg mt-4 max-w-2xl" style={{color: "gray"}}>
+            <p className="text-white text-lg mt-4 max-w-2xl" style={{ color: "gray" }}>
               Showcasing innovative solutions that blend cutting-edge technology with practical applications.
             </p>
           </div>
-          
-          <motion.a 
-            href="https://github.com/FarhanDevelopeir" 
-            target="_blank" 
+
+          <motion.a
+            href="https://github.com/FarhanDevelopeir"
+            target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center space-x-3 bg-gray-900 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
             whileHover={{ scale: 1.05, y: -2 }}
@@ -151,7 +118,7 @@ export default function MyPortfolio() {
         </motion.div>
 
         {/* Portfolio Grid */}
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
@@ -166,8 +133,8 @@ export default function MyPortfolio() {
             >
               {/* Project Image */}
               <div className="relative overflow-hidden">
-                <img 
-                  src={project.image} 
+                <img
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -183,7 +150,7 @@ export default function MyPortfolio() {
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-white transition-colors duration-300">
                   {project.title}
                 </h3>
-                
+
                 <p className="text-gray-200 leading-relaxed mb-4">
                   {project.description}
                 </p>
@@ -191,7 +158,7 @@ export default function MyPortfolio() {
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, index) => (
-                    <span 
+                    <span
                       key={index}
                       className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium"
                     >
@@ -202,19 +169,19 @@ export default function MyPortfolio() {
 
                 {/* Action Buttons */}
                 <div className="flex space-x-3">
-                  <a 
-                    href={project.liveLink} 
-                    target="_blank" 
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 bg-blue-600 text-white text-center py-3 px-4 rounded-xl font-semibold hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center space-x-2"
                   >
                     <ExternalLink className="w-4 h-4" />
                     <span>Live Demo</span>
                   </a>
-                  
-                  <a 
-                    href={project.githubLink} 
-                    target="_blank" 
+
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 border-2 border-gray-200 rounded-xl hover:border-gray-900 hover:bg-gray-900 text-white transition-all duration-300 flex items-center justify-center"
                   >
@@ -227,16 +194,17 @@ export default function MyPortfolio() {
         </motion.div>
 
         {/* Bottom CTA */}
-        <motion.div 
+        <motion.div
           className="text-center mt-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-         
-          <a 
-            href="#contact" 
+
+          <a
+            href={whatsappUrl}
+            target="_blank"
             className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
           >
             <span>Let's Work Together</span>
